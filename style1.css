@@ -1,0 +1,124 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('2.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.marquee {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.marquee img {
+  position: absolute ;
+  max-width: 300px;
+  left: 300px;
+}
+
+.marquee .run {
+  animation: marquee 15s ease-in-out forwards;
+  
+}
+
+.marquee .fly-up {
+  animation: flyUp 3s ease-in-out forwards;
+  animation-delay: 7s;
+}
+
+.marquee .run-and-fly {
+  animation: runAndFly 10s ease-in-out forwards;
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(90%);
+  }
+  40% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(-40%);
+    
+  }
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-500px);
+    opacity: 1;
+  }
+}
+
+@keyframes runAndFly {
+  0% {
+    transform: translateX(150%);
+  }
+  60% {
+    transform: translateX(-16%); 
+  }
+  70% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(-75px) translateY(-500px); 
+    opacity: 1;
+  }
+}
+
+.center-text {
+    text-align: center; 
+    font-size: 80px;
+    color: red; 
+    position: absolute; 
+    top: 20%; 
+    left: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0; 
+    animation: fadeInZoom 2s ease-in-out 10s forwards;
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5); 
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1); 
+    }
+}
+.dragon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("9.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 600px; 
+  height: 600px; 
+  z-index: -1; 
+}
+
+  
+
+
+  
